@@ -1,1 +1,29 @@
-ECHO is on.
+{% extends "master.html" %}
+
+{% block body %}
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-3xl font-bold text-gray-800 mb-6">Product</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="text-left px-6 py-4 text-sm font-semibold">Name</th>
+            <th class="text-left px-6 py-4 text-sm font-semibold">Category</th>
+            <th class="text-left px-6 py-4 text-sm font-semibold">Price</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr class="hover:bg-gray-50 transition">
+            
+            <td class="px-6 py-4 text-sm font-medium text-gray-800">{{ product.name }}</td>
+            <td class="px-6 py-4 text-sm text-gray-600">{{ product.category }}</td>
+            <td class="px-6 py-4 text-sm text-gray-800 font-semibold">{{ product.price }}</td>
+          </tr>
+  
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+{% endblock body %}

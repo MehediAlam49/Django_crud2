@@ -23,7 +23,7 @@
             <td class="px-6 py-4 space-x-2">
               <a href="{% url "editProduct" product.id %}" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm">Edit</a>
               <a href="{% url "deleteProduct" product.id %}" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm">Delete</a>
-              <a href="#" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm">View</a>
+              <a href="{% url "viewProduct" product.id %}" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm">View</a>
             </td>
           </tr>
           {% endfor %}

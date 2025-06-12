@@ -31,3 +31,7 @@ def deleteProduct(request,id):
 def productList(request):
     productData = productModel.objects.all()
     return render(request, 'productList.html', {'productData':productData})
+
+def viewProduct(request,id):
+    productData = productModel.objects.get(id=id)
+    return render(request, 'viewProduct.html', {'product':productData})

@@ -24,5 +24,6 @@ urlpatterns = [
     path('add-product/', addProduct, name='addProduct'),
     path('edit-product/<str:id>', editProduct, name='editProduct'),
     path('delete-product/<str:id>', deleteProduct, name='deleteProduct'),
+    path('view-product/<str:id>', viewProduct, name='viewProduct'),
     path('product-list/', productList, name='productList'),
 ]
