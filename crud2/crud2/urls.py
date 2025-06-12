@@ -16,7 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from crud2.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),
+    path('add-product/', addProduct, name='addProduct'),
+    path('edit-product/', editProduct, name='editProduct'),
+    path('delete-product/', deleteProduct, name='deleteProduct'),
+    path('product-list/', productList, name='productList'),
 ]
