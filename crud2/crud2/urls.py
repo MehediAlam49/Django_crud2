@@ -23,6 +23,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('add-product/', addProduct, name='addProduct'),
     path('edit-product/', editProduct, name='editProduct'),
-    path('delete-product/', deleteProduct, name='deleteProduct'),
+    path('delete-product/<str:id>', deleteProduct, name='deleteProduct'),
     path('product-list/', productList, name='productList'),
 ]

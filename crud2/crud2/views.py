@@ -15,8 +15,9 @@ def addProduct(request):
     return render(request, 'addProduct.html')
 def editProduct(request):
     return render(request, 'editProduct.html')
-def deleteProduct(request):
-    return render(request, 'deleteProduct.html')
+def deleteProduct(request,id):
+    product = productModel.objects.get(id=id).delete()
+    return redirect('productList')
 def productList(request):
     productData = productModel.objects.all()
     return render(request, 'productList.html', {'productData':productData})
